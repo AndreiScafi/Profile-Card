@@ -26,6 +26,7 @@ html {
     display: flex;
     border-radius: .5rem .5rem 0 0;
     position: relative;
+    z-index: 100;
 }
 
 .img-wrapper {
@@ -82,6 +83,12 @@ html {
     color: #fff;
     padding: 1.5rem 2rem;
     border-radius: 0 0 .5rem .5rem;
+    transform: translateY(-100%);
+    transition: all .5s;
+}
+
+.change .card-contact {
+    transform: translateY(0);
 }
 
 .card-contact h4 {
@@ -91,6 +98,13 @@ html {
     text-transform: uppercase;
     letter-spacing: .1rem;
     text-shadow: 0 .1rem .2rem rgba(0, 0, 0, .3);
+    transform: scale(0);
+    transform-origin: left;
+    transition: all .5s;
+}
+
+.change .card-contact h4 {
+    transform: scale(1);
 }
 
 .card-social {
@@ -101,6 +115,27 @@ html {
     display: flex;
     align-items: center;
     cursor: pointer;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.email {
+    transition: all .5s .3s;
+}
+
+.fb {
+    transition: all .5s .5s;
+}
+
+.linkedin {
+    transition: all .5s .7s;
+}
+
+.change .card-social {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 .icon-wrapper {
