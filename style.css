@@ -76,6 +76,44 @@ html {
     box-shadow: 0 .3rem .8rem rgba(0, 0, 0, .3);
     outline: none;
     cursor: pointer;
+    transition: all .5s;
+}
+
+.change .card-btn {
+    width: 6rem;
+    right: 3rem;
+    bottom: -3rem;
+    border-radius: 50%;
+}
+
+.card-btn-contact {
+    transition: all .5s .1s;
+}
+
+.card-btn-contact,
+.card-btn i {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-btn i {
+    opacity: 0;
+    visibility: visible;
+}
+
+.change .card-btn-contact {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .1s;
+}
+
+.change .card-btn i {
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s;
 }
 
 .card-contact {
